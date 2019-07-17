@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>Bounce Roadsurf Game</title>
+
+    </head>
+
+    <body style="margin: 0; background: #EDE792; color: #A22D02; font-size: 18px; overflow: hidden;">
+        <div id="landingPage" style="background: #EDE792; width: 97%; height: 100%; text-align: center; margin: 40px 5px;">
+            <h1 style="color: #6C0903">Bounce Roadsurf Game</h1>
+            <p>Bounce Roadsurf Game is a game akin to Google Chrome's T-Rex game where you race it out for maximum possible points!</p>
+            <br>
+            <h3 style="color: #6C0903">Game Rules</h3>
+            <p>Simple! Avoid the trees and the dead tree trunks on the road and stay in the game for as long as you can. Aha!</p>
+            <br>
+            <h3 style="color: #6C0903">How to Play</h3>
+            <p>Simple! Swerve left and right with the left and right arrow keys on the keyboard. Jump with the up or the spacebar key on the keyboard</p>
+            <br>
+            <h3 style="color: #6C0903">Game Options</h3>
+            <!-- <form onsubmit="return false;"> -->
+                <p>
+                    Game Theme: 
+                    <input type="radio" value="0" name="gameTheme" id="gameTheme" checked>Dark
+                    <input type="radio" value="1" name="gameTheme" id="gameTheme">Light
+
+                    <br>
+                    Game Speed: 
+                    <input type="radio" value="0" name="difficulty" id="difficulty" checked> Slow
+                    <input type="radio" value="1" name="difficulty" id="difficulty"> Intermediate
+                    <input type="radio" value="2" name="difficulty" id="difficulty"> Fast
+                    <input type="radio" value="3" name="difficulty" id="difficulty"> Turbo
+                </p>
+                <p>
+                    <button class="btn btn-lg btn-success" onclick="startGame()">PLAY!</button>
+                </p>
+            <!-- </form> -->
+
+        </div>
+
+        <div id="gameOverDiv" style="display: none">
+            <h1 style="color: #6C0903">Bounce Roadsurf Game</h1>
+            <h3 style="color: #6C0903">Game Over!</h3>
+            <p><span style="color:red; font-weight: bold;">Your Score</span>: <span id="gameOverPoints"></span> </p> 
+            <p><a class="btn btn-lg btn-success" href=".">Go to Landing Page</a></p>
+        </div>
+        <div id="game"></div>
+        
+    </body>
+
+    <script type="text/javascript" src="js/vendor/three.min.js"></script>
+    <script type="text/javascript" src="js/vendor/stats.min.js"></script>
+    <script type="text/javascript" src="js/vendor/OrbitControls.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+
+</html>
